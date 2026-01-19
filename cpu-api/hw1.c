@@ -14,7 +14,7 @@ int main(int argc, char *argv[]) {
     } else if (rc == 0) { // 자식 (새 프로세스)
         x = 1;
         printf("자식 프로세스 (pid:%d)에서의 x 값: %d\n ", (int) getpid(), x);
-    } else { // 부모 프로세스는 이 경로에 따라 실행한다. (main)
+    } else { // 부모 프로세스는 이 경로에 따라 실행한다.
         int wc = wait(NULL);
         printf("부모 프로세스 (pid:%d)에서의 x 값: %d\n ", (int) getpid(), x);
     }
